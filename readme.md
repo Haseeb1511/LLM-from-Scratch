@@ -1,5 +1,7 @@
 # LLM from scratch
 ### Transforer Architecture
+
+![alt text](image.png)
 ---
 **B = batch size   the no of sequences(sentences) we process in parallel**
 
@@ -19,9 +21,9 @@
 
 ### Self Attention
 
-* In **self attention** all 3 vectors (Query, Key, Value) come from the **same sequence**.
-* In **multi-head attention** we have multiple self-attention layers (heads) inside the block to capture **different meanings** of the input sequence.
-* In **cross attention** the Query comes from one sequence (decoder output) while Key and Value come from another sequence (encoder output).
+* In **Self Attention** all 3 vectors (Query, Key, Value) come from the **same sequence**.
+* In **Multi-Head Attention** we have multiple self-attention layers (heads) inside the block to capture **different meanings** of the input sequence.
+* In **Cross Attention** the Query comes from one sequence (decoder output) while Key and Value come from another sequence (encoder output).
 
 ---
 
@@ -117,3 +119,26 @@
    * Apply softmax → gives probability distribution of next token.
 
 ---
+
+
+# ⚡ Key Features of Transformer
+
+1. ***Parallelization*** – processes entire sequences simultaneously (unlike RNNs).
+
+2. ***Multi-Head Attention*** – captures multiple relationships at once.
+
+3. ***Residual Connections*** – stabilize training, prevent vanishing gradients.
+
+4. ***Layer Normalization*** – normalizes inputs at each sub-layer.
+
+5. ***Scalability*** – backbone of LLMs (GPT, BERT, T5, etc.)
+
+---
+
+# 🔄 Full Transformer Architecture
+
+```text
+Input Sequence  --->  [Encoder Blocks] ---> Contextual Embeddings
+                                                 |
+Target Sequence --->  [Decoder Blocks] ---> Next Token Prediction
+```
